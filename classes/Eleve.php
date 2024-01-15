@@ -1,11 +1,10 @@
 <?php
+require_once './classes/Personne.php';
 
-    class Personne {
-        private $prenom;
-        private $nom;
+    class Eleve extends Personne {
         private $age;
         private $adresse;
-        public function __construct($prenom, $nom, $age)
+        public function __construct(string $prenom, string $nom, int $age)
         {
             $this->prenom = $prenom;
             $this->nom = $nom;
@@ -13,14 +12,6 @@
         }
 
         //getter = accesseur
-        public function getPrenom(){
-            return $this->prenom;
-        }
-
-        public function getNom(){
-            return $this->nom;
-        }
-
         public function getAge(){
             return $this->age;
         }
